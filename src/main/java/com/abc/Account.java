@@ -50,6 +50,12 @@ public void withdraw(double amount) {
                 if (amount <= 2000)
                     return 20 + (amount-1000) * 0.05;
                 return 70 + (amount-2000) * 0.1;
+            case SUPER_SAVINGS:
+                if(amount<=1000)
+                 return amount * 0.04;
+                if(amount<=2000)
+                    return 40 + (amount - 1000) * 0.07;
+                return 110 + (amount-2000) * 0.12;
             default:
                 return amount * 0.001;
         }
